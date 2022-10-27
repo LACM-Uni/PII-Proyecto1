@@ -10,7 +10,7 @@ class Matriz
 
     void producto_matriz(const Matriz , Matriz );
     void sumar_matriz(const Matriz );
-    void escalar_por_matriz(float );
+    void escalar_por_matriz(const float );
     void gauss_jordan(const int );
 
      ~Matriz();
