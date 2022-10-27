@@ -75,7 +75,7 @@ void Matriz::producto_matriz(const Matriz mp, Matriz res)
     }
 
 
-void Matriz::sumar_matriz(Matriz sum)
+void Matriz::sumar_matriz(const Matriz sum)
     {
         for(int i=0; i<filas; i++)
         {
@@ -105,7 +105,7 @@ void Matriz::escalar_por_matriz(float escalar)
 
 
 
-void Matriz::gauss_jordan(int n)
+void Matriz::gauss_jordan(const int n)
     {
         float x[n];
         float temp;
@@ -137,4 +137,10 @@ void Matriz::gauss_jordan(int n)
 
 
 Matriz::~Matriz()
-    {    }
+    {
+        for(int i=0; i<filas; i++)
+            {
+                delete[] matriz[i];
+            }
+            delete[] matriz;
+    }
