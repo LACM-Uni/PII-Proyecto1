@@ -88,7 +88,7 @@ void Matriz::sumar_matriz(const Matriz sum)
     }
 
 
-void Matriz::escalar_por_matriz(float escalar)
+void Matriz::escalar_por_matriz(const float escalar)
     {
         for(int i=0;i<filas;i++)
         {
